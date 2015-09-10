@@ -1,11 +1,26 @@
+#
+#  Be sure to run `pod spec lint ASIHttpRequest.podspec' to ensure this is a
+#  valid spec and to remove all comments including this before submitting the spec.
+#
+#  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
+#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
+#
+
 Pod::Spec.new do |s|
 
-  s.name         = "HuAihongASIHttpRequest"
+  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  These will help people to find your library, and whilst it
+  #  can feel like a chore to fill in it's definitely to your advantage. The
+  #  summary should be tweet-length, and the description more in depth.
+  #
+
+  s.name         = "ASIHttpRequest"
   s.version      = "0.0.1"
-  s.summary      = "ASIHttpRequest"
+  s.summary      = ""
 
   s.description  = <<-DESC
-                   A longer description of ZLAutoScrollImageSwitcher in Markdown format.
+                   A longer description of ASIHttpRequest in Markdown format.
 
                    * Think: Why did you write this? What is the focus? What does it do?
                    * CocoaPods will be using this to generate tags, and improve search results.
@@ -13,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "https://github.com/huaihong1986/ASIHttpRequest.git"
+  s.homepage     = "https://github.com/huaihong1986/ASIHttpRequest"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -37,11 +52,11 @@ Pod::Spec.new do |s|
   #  Specify a social_media_url where others can refer to, for example a twitter
   #  profile URL.
   #
-  
-  s.author             = { "huaihong" => "huaihong1986@sina.com" }
-  # Or just: s.author    = "huaihong"
-  # s.authors            = { "huaihong" => "huaihong1986@sina.com" }
-  # s.social_media_url   = "https://github.com/huaihong1986/"
+
+  s.author             = { "huaihong1986" => "huaihong1986@sina.com" }
+  # Or just: s.author    = "huaihong1986"
+  # s.authors            = { "huaihong1986" => "huaihong1986@sina.com" }
+  # s.social_media_url   = "http://twitter.com/huaihong1986"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -55,6 +70,7 @@ Pod::Spec.new do |s|
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
   # s.osx.deployment_target = "10.7"
+  # s.watchos.deployment_target = "2.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -63,19 +79,19 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/huaihong/ASIHttpRequest.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/huaihong1986/ASIHttpRequest.git", :commit => "0c1ae1c3b1c93dabe334d18738ad6e421636e6b5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any h, m, mm, c & cpp files. For header
-  #  files it will include any header in the folder.
+  #  giving a folder will include any swift, h, m, mm, c & cpp files.
+  #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes/*.{h,m}"
-  #s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -113,8 +129,9 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
+  # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
- 
+  # s.dependency "JSONKit", "~> 1.4"
+
 end
